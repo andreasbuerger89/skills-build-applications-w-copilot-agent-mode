@@ -1,22 +1,15 @@
 import express from 'express';
+import Team from '../models/team.js';
 
 const router = express.Router();
 
-const teams = [
-  { id: '1', name: 'Team OctoFit', members: 8 },
-  { id: '2', name: 'Hydra Squad', members: 5 }
-];
-
-router.get('/', (_req, res) => {
+router.get('/', async (_req, res) => {
+  const teams = await Team.find().populate('members', 'name email role').lean();
   res.json({ data: teams });
 });
 
-router.post('/', (req, res) => {
-  const newTeam = {
-    id: String(teams.length + 1),
-    ...req.body
-  };
-  teams.push(newTeam);
+router.post('/', async (req, res) => {
+  const newTeam = await Team.create(req.body);
   res.status(201).json({ data: newTeam });
 });
 

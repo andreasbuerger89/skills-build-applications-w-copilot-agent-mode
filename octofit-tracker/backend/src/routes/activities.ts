@@ -1,22 +1,15 @@
 import express from 'express';
+import Activity from '../models/activity.js';
 
 const router = express.Router();
 
-const activities = [
-  { id: '1', type: 'running', distanceKm: 5, durationMinutes: 28 },
-  { id: '2', type: 'cycling', distanceKm: 12, durationMinutes: 45 }
-];
-
-router.get('/', (_req, res) => {
+router.get('/', async (_req, res) => {
+  const activities = await Activity.find().populate('user', 'name email').lean();
   res.json({ data: activities });
 });
 
-router.post('/', (req, res) => {
-  const newActivity = {
-    id: String(activities.length + 1),
-    ...req.body
-  };
-  activities.push(newActivity);
+router.post('/', async (req, res) => {
+  const newActivity = await Activity.create(req.body);
   res.status(201).json({ data: newActivity });
 });
 

@@ -1,13 +1,10 @@
 import express from 'express';
+import Leaderboard from '../models/leaderboard.js';
 
 const router = express.Router();
 
-const leaderboard = [
-  { rank: 1, user: 'Alex', points: 1200 },
-  { rank: 2, user: 'Jordan', points: 1100 }
-];
-
-router.get('/', (_req, res) => {
+router.get('/', async (_req, res) => {
+  const leaderboard = await Leaderboard.find().sort({ rank: 1 }).populate('user', 'name email').lean();
   res.json({ data: leaderboard });
 });
 
