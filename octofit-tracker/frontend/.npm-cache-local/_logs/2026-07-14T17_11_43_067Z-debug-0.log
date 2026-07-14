@@ -1,0 +1,27 @@
+0 verbose cli /opt/homebrew/Cellar/node/25.9.0_2/bin/node /opt/homebrew/bin/npm
+1 info using npm@11.12.1
+2 info using node@v25.9.0
+3 silly config load:file:/opt/homebrew/lib/node_modules/npm/npmrc
+4 info config found workspace root at /Users/andreasburger/develop/skills-build-applications-w-copilot-agent-mode
+5 silly config load:file:/Users/andreasburger/develop/skills-build-applications-w-copilot-agent-mode/.npmrc
+6 silly config load:file:/Users/andreasburger/.npmrc
+7 silly config load:file:/opt/homebrew/etc/npmrc
+8 verbose title npm view typescript version
+9 verbose argv "view" "typescript" "version" "--cache" ".npm-cache-local"
+10 verbose logfile logs-max:10 dir:/Users/andreasburger/develop/skills-build-applications-w-copilot-agent-mode/octofit-tracker/frontend/.npm-cache-local/_logs/2026-07-14T17_11_43_067Z-
+11 verbose logfile /Users/andreasburger/develop/skills-build-applications-w-copilot-agent-mode/octofit-tracker/frontend/.npm-cache-local/_logs/2026-07-14T17_11_43_067Z-debug-0.log
+12 silly logfile done cleaning log files
+13 warn Ignoring workspaces for specified package(s)
+14 http fetch GET 200 https://registry.npmjs.org/npm 142ms
+15 http fetch GET 200 https://registry.npmjs.org/typescript 441ms (cache miss)
+16 verbose cwd /Users/andreasburger/develop/skills-build-applications-w-copilot-agent-mode/octofit-tracker/frontend
+17 verbose os Darwin 25.5.0
+18 verbose node v25.9.0
+19 verbose npm  v11.12.1
+20 notice
+20 notice New [33mminor[39m version of npm available! [33m11.12.1[39m -> [34m11.18.0[39m
+20 notice Changelog: [34mhttps://github.com/npm/cli/releases/tag/v11.18.0[39m
+20 notice To update run: [4mnpm install -g npm@11.18.0[24m
+20 notice  { force: true, Symbol(proc-log.meta): true }
+21 verbose exit 0
+22 info ok

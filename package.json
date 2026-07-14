@@ -1,0 +1,14 @@
+{
+  "name": "octofit-tracker-monorepo",
+  "private": true,
+  "workspaces": [
+    "octofit-tracker/frontend",
+    "octofit-tracker/backend"
+  ],
+  "scripts": {
+    "dev:frontend": "cd octofit-tracker/frontend && npm run dev",
+    "dev:backend": "cd octofit-tracker/backend && npm run dev",
+    "install:all": "npm install --workspaces",
+    "start": "npm run dev:frontend"
+  }
+}
