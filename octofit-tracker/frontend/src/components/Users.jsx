@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { apiBase, normalizeResponse } from '../lib/api.js';
 
+// Example endpoint used in Codespaces: https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev/api/users/
 function Users() {
   const [users, setUsers] = useState([]);
 
